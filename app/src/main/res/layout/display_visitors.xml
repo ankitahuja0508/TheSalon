@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fillable_area"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="40dip"
+            android:layout_marginRight="40dip"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/startDatePicker"
+                android:text = "@string/startDateButtonText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="40dip"
+            android:layout_marginRight="40dip"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/endDatePicker"
+                android:text = "@string/endDateButtonText"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="5">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        >
+
+    <TableLayout
+        android:id="@+id/table_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TableLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TableLayout
+            android:id="@+id/scrollable_part"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" />
+    </ScrollView>
+</LinearLayout>
+    </HorizontalScrollView>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.8" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="1dip"
+            android:gravity="left"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:id="@+id/tvTotalVisitors"
+                android:gravity="center"
+                android:background="@drawable/footer"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="1dip"
+            android:gravity="right">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/tvTotalVisits"
+                android:gravity="center"
+                android:background="@drawable/footer"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

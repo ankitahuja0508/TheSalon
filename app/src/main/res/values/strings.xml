@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">The Perfect Salon</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="userIDHintText">User ID</string>
+    <string name="passwordHintText">Password</string>
+    <string name="oldpasswordHintText">Old Password</string>
+    <string name="newpasswordHintText">New Password</string>
+    <string name="changePassBtnText">Change</string>
+    <string name="loginButtonText">Login</string>
+    <string name="nameHintText">Name</string>
+    <string name="contactHintText">Contact Number</string>
+    <string name="amountHintText">Amount</string>
+    <string name="serviceHintText">Service</string>
+    <string name="registerButtonText">Register</string>
+    <string name="dailyButtonText">Daily</string>
+    <string name="weeklyButtonText">Weekly</string>
+    <string name="monthlyButtonText">Monthly</string>
+    <string name="yearlyButtonText">Yearly</string>
+    <string name="titleTextView">Select type of Report</string>
+    <string name="startDateButtonText">Select Start Date</string>
+    <string name="endDateButtonText">Select End Date</string>
+    <string name="franchiseeIDHintText">Franchisee ID</string>
+    <string name="franchiseePasswordHintText">Password</string>
+    <string name="franchiseeLocationHintText">Franchisee Name</string>
+    <string name="franchiseeAddButtonText">Add</string>
+    <string name="franchiseeDeleteButtonText">Delete Franchisee</string>
+    <string name="franchiseeActivateButtonText">Activate Franchisee</string>
+    <string name="changePassButtonText">Change Password</string>
+    <string name="optionAddFranchiseeButtonText">Add Franchisee</string>
+    <string name="optionGetReportsButtonText">Get Reports</string>
+    <string name="saveDetailsButtonText">Save Details</string>
+    <string name="creditsText">Developed by:\nWise Business Technologies,Panipat
+        \nhttp://www.wisebiztech.com</string>
+
+    <string name="site">http://www.wisebiztech.com</string>
+</resources>

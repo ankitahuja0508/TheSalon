@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/display"
+        android:title="Display All Visitors"/>
+
+    <item
+        android:id="@+id/changePass"
+        android:title="Change Password"/>
+
+    <item
+        android:id="@+id/log_out"
+        android:title="Log Out"/>
+</menu>

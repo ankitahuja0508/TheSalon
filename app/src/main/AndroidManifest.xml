@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="aexyn.theperfect.salon">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.read_external_storage" />
+    <!-- Internet Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+        </activity>
+
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+            </activity>
+
+        <activity
+            android:name=".UserRegistration"
+            android:label="Registration"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".AdminPanel"
+            android:label="Admin Panel"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".DisplayVisitorNames"
+            android:label="All Visitors"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".DisplayVisitorDetails"
+            android:label="Details"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".AddFranchisee"
+            android:label="Add Franchisee"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".DisplayVisitorsAdmin"
+            android:label="All Visitors"
+            android:screenOrientation="landscape"></activity>
+    </application>
+
+</manifest>
