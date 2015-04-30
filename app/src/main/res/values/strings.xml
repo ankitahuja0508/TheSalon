@@ -6,8 +6,8 @@
     <string name="action_settings">Settings</string>
     <string name="userIDHintText">User ID</string>
     <string name="passwordHintText">Password</string>
-    <string name="oldpasswordHintText">Old Password</string>
-    <string name="newpasswordHintText">New Password</string>
+    <string name="oldPassword">Old Password</string>
+    <string name="newPassword">New Password</string>
     <string name="changePassBtnText">Change</string>
     <string name="loginButtonText">Login</string>
     <string name="nameHintText">Name</string>
@@ -24,7 +24,7 @@
     <string name="endDateButtonText">Select End Date</string>
     <string name="franchiseeIDHintText">Franchisee ID</string>
     <string name="franchiseePasswordHintText">Password</string>
-    <string name="franchiseeLocationHintText">Franchisee Name</string>
+    <string name="franchiseeLocationHintText">Franchisee Location</string>
     <string name="franchiseeAddButtonText">Add</string>
     <string name="franchiseeDeleteButtonText">Delete Franchisee</string>
     <string name="franchiseeActivateButtonText">Activate Franchisee</string>
@@ -32,8 +32,9 @@
     <string name="optionAddFranchiseeButtonText">Add Franchisee</string>
     <string name="optionGetReportsButtonText">Get Reports</string>
     <string name="saveDetailsButtonText">Save Details</string>
-    <string name="creditsText">Developed by:\nWise Business Technologies,Panipat
-        \nhttp://www.wisebiztech.com</string>
-
+    <string name="creditsText">Developed by:\nWise Business Technologies,Panipat\nhttp://www.wisebiztech.com</string>
     <string name="site">http://www.wisebiztech.com</string>
+    <string name="confirm_pass">Confirm Password</string>
+    <string name="no_network">Network issues, unable to connect</string>
+    <string name="validation_error">All Fields Required</string>
 </resources>

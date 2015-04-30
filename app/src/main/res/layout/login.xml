@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:tools="http://schemas.android.com/tools"
+       tools:showIn="@layout/activity_login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:background="@drawable/trans_gray"
+        android:layout_margin="5dp"
+        android:padding="15dp">
+
+        <include layout="@layout/id_pass"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:textColor="#000"
+        android:fontFamily="sans-serif-light"
+        android:textSize="19dp"
+        android:background="@drawable/trans_white"
+        android:text="@string/loginButtonText"/>
+</merge>

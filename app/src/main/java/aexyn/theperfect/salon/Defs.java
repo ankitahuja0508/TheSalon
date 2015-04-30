@@ -29,7 +29,7 @@ public class Defs {
 
     public static ProgressDialog pDialog;
     // Connection detector class
-    public static ConnectionDetector cd;
+    public static Network cd;
     public static String LOCATION = "";
     public static String LOCATION_SELECTED_ADMIN = "";
     public static String USERNAME = "";
@@ -61,7 +61,7 @@ public class Defs {
 
     public static String TOTAL_VISITORS_TEXT = "Total Visitors : ";
     public static String TOTAL_VISITS_TEXT = "Total Visits : ";
-    public static String server_ip = "http://192.168.1.126/wbt_demo/";
+    public static String server_ip = "http://aexynperfectsalon.site11.com/perfect_salon/api/";
 
     public static String url_validate_login = server_ip
             + "franchisee_login.php";
@@ -72,7 +72,7 @@ public class Defs {
     public static String url_get_visitor_names = server_ip
             + "get_visitor_names.php";
 
-    public static String url_get_visitor_datails = server_ip
+    public static String url_get_visitor_details = server_ip
             + "get_visitor_details.php";
 
     public static String url_add_franchisee = server_ip

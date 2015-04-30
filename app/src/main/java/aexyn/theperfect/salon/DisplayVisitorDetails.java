@@ -83,7 +83,6 @@ public class DisplayVisitorDetails extends ActionBarActivity implements OnClickL
 
         addHeader();
 
-        Defs.cd = new ConnectionDetector(getApplicationContext());
 
         Intent i = getIntent();
         phone = i.getStringExtra(Defs.TAG_PHONE);
@@ -219,16 +218,16 @@ public class DisplayVisitorDetails extends ActionBarActivity implements OnClickL
         switch (id) {
 
             case START_DATE_DIALOG_ID:
-                return new DatePickerDialog(this, startdatePickerListener,
+                return new DatePickerDialog(this, startDateListener,
                         c.get(Calendar.YEAR), c.get(Calendar.MONTH),c.get(Calendar.DAY_OF_MONTH));
             case END_DATE_DIALOG_ID:
-                return new DatePickerDialog(this, enddatePickerListener,
+                return new DatePickerDialog(this, endDateListener,
                         c.get(Calendar.YEAR), c.get(Calendar.MONTH),c.get(Calendar.DAY_OF_MONTH));
         }
         return null;
     }
 
-    private DatePickerDialog.OnDateSetListener startdatePickerListener
+    private DatePickerDialog.OnDateSetListener startDateListener
             = new DatePickerDialog.OnDateSetListener() {
 
         // when dialog box is closed, below method will be called.
@@ -238,12 +237,10 @@ public class DisplayVisitorDetails extends ActionBarActivity implements OnClickL
             month = selectedMonth;
             day = selectedDay;
 
-            btnStartDate.setText(new StringBuilder().append(year).append("-").append(month + 1)
-                    .append("-").append(day));
+            btnStartDate.setText(String.valueOf(year) + "-" + (month + 1) + "-" + day);
 
             try {
-                startDate = formatter.parse(new StringBuilder().append(year).append("-").append(month + 1)
-                        .append("-").append(day).toString());
+                startDate = formatter.parse(String.valueOf(year) + "-" + (month + 1) + "-" + day);
             } catch (ParseException e) {
                 e.printStackTrace();
             }
@@ -254,7 +251,7 @@ public class DisplayVisitorDetails extends ActionBarActivity implements OnClickL
         }
     };
 
-    private DatePickerDialog.OnDateSetListener enddatePickerListener
+    private DatePickerDialog.OnDateSetListener endDateListener
             = new DatePickerDialog.OnDateSetListener() {
 
         // when dialog box is closed, below method will be called.
@@ -318,7 +315,7 @@ public class DisplayVisitorDetails extends ActionBarActivity implements OnClickL
             params.add(new BasicNameValuePair("contact", phone));
 
             jsonResponse = Defs.jsonParser.makeHttpRequest(
-                    Defs.url_get_visitor_datails, "GET", params);
+                    Defs.url_get_visitor_details, "GET", params);
 
             // check log cat for response
             Log.e("Visitors details", jsonResponse.toString());

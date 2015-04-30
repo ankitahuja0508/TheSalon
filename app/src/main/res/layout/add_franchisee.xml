@@ -1,85 +1,56 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:paddingLeft="40dip"
-        android:paddingRight="40dip" >
-
-        <EditText
-            android:id="@+id/edtFranchiseeID"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:ems="10"
-            android:hint="@string/franchiseeIDHintText"
-            android:singleLine="true"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:paddingLeft="40dip"
-        android:paddingRight="40dip">
-
-        <EditText
-            android:id="@+id/edtFranchiseePass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:ems="10"
-            android:hint="@string/franchiseePasswordHintText"
-            android:singleLine="true">
-
-            <requestFocus />
-        </EditText>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:paddingLeft="40dip"
-        android:paddingRight="40dip">
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_horizontal_margin">
 
         <EditText
             android:id="@+id/edtLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:ems="10"
+            android:layout_margin="@dimen/between_views"
             android:hint="@string/franchiseeLocationHintText"
-            android:singleLine="true" />
-    </LinearLayout>
+            android:singleLine="true"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:gravity="top"
-        android:orientation="vertical"
-        android:paddingBottom="20dip"
-        android:paddingLeft="70dip"
-        android:paddingRight="70dip"
-        android:paddingTop="10dip">
+        <EditText
+            android:id="@+id/edtFranchiseeID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtLocation"
+            android:layout_margin="@dimen/between_views"
+            android:hint="@string/franchiseeIDHintText"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/edtFranchiseePass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtFranchiseeID"
+            android:layout_margin="@dimen/between_views"
+            android:hint="@string/franchiseePasswordHintText"
+            android:singleLine="true"/>
+
+        <EditText
+            android:id="@+id/edtFranchiseeConfirmPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtFranchiseePass"
+            android:layout_margin="@dimen/between_views"
+            android:hint="@string/confirm_pass"
+            android:singleLine="true"/>
 
         <Button
             android:id="@+id/btnAddFranchisee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/franchiseeAddButtonText" />
-    </LinearLayout>
+            android:layout_below="@id/edtFranchiseeConfirmPass"
+            android:layout_margin="@dimen/between_views"
+            android:text="@string/franchiseeAddButtonText"/>
 
-</LinearLayout>
+    </RelativeLayout>
+</ScrollView>
