@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EditAnimation">
+        <attr name="floatLabelTextAppearance" format="reference" />
+        <attr name="floatLabelTrigger" format="enum">
+            <enum name="text" value="0" />
+            <enum name="focus" value="1" />
+        </attr>
+        <attr name="floatLabelSidePadding" format="reference|dimension" />
+    </declare-styleable>
+</resources>

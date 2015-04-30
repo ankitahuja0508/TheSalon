@@ -14,8 +14,7 @@ public class TimeStamp {
     public static String getNow() {
         Time now = new Time();
         now.setToNow();
-        String sTime = now.format("%Y_%m_%d %T");
-        return sTime;
+        return now.format("%Y_%m_%d %T");
     }
     /**
      * Get current time in human-readable form without spaces and special characters.
@@ -25,21 +24,18 @@ public class TimeStamp {
     public static String getTimeStamp() {
         Time now = new Time();
         now.setToNow();
-        String sTime = now.format("%Y_%m_%d_%H_%M_%S");
-        return sTime;
+        return now.format("%Y_%m_%d_%H_%M_%S");
     }
 
     public static String getDate() {
         Time now = new Time();
         now.setToNow();
-        String sTime = now.format("%Y-%m-%d");
-        return sTime;
+        return now.format("%Y-%m-%d");
     }
 
     public static String getTime() {
         Time now = new Time();
         now.setToNow();
-        String sTime = now.format("%H:%M:%S");
-        return sTime;
+        return now.format("%H:%M:%S");
     }
 }

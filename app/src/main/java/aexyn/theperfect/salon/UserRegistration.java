@@ -71,14 +71,13 @@ public class UserRegistration extends ActionBarActivity implements OnClickListen
 
         //credits.setOnClickListener(this);
 
-        Defs.cd = new ConnectionDetector(getApplicationContext());
     }
 
     public void startRegister() {
         if (!edtName.getText().toString().isEmpty()
                 && !edtContact.getText().toString().isEmpty()) {
             if (edtContact.getText().toString().length() == 10) {
-                if (Defs.cd.isConnectingToInternet()) {
+                if (Network.isAvailable(getApplicationContext())) {
                     new Register().execute();
                 } else {
                     Defs.showToast(getApplicationContext(),

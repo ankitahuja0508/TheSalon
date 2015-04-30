@@ -1,72 +1,26 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    android:id="@+id/parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:alpha="10">
+    >
+
+    <ImageView
+        android:id="@+id/blur_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:src="@drawable/back"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:paddingBottom="20dip"
-        android:paddingLeft="40dip"
-        android:paddingRight="40dip"
-        android:paddingTop="60dip">
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/edtUserID"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:ems="10"
-            android:hint="@string/userIDHintText"
-            android:singleLine="true">
-
-            <requestFocus />
-        </EditText>
+        <include
+            layout="@layout/login"
+            />
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:paddingBottom="20dip"
-        android:paddingLeft="40dip"
-        android:paddingRight="40dip"
-        android:paddingTop="30dip">
-
-        <EditText
-            android:id="@+id/edtPass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:ems="10"
-            android:hint="@string/passwordHintText"
-            android:inputType="textPassword"
-            android:singleLine="true"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:gravity="top"
-        android:orientation="vertical"
-        android:paddingBottom="20dip"
-        android:paddingLeft="70dip"
-        android:paddingRight="70dip"
-        android:paddingTop="10dip">
-
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/loginButtonText" />
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

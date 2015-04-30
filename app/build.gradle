@@ -10,6 +10,8 @@ android {
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
     }
     buildTypes {
         release {
@@ -22,5 +24,6 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:22.1.0'
-    compile files('libs/ftp4j-1.7.2.jar')
 }
+
+

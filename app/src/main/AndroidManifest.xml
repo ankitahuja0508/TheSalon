@@ -15,12 +15,14 @@
         <activity
             android:name=".SplashScreen"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+            android:theme="@style/Theme.AppCompat.NoActionBar.FullScreen">
         </activity>
 
         <activity
             android:name=".LoginActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="adjustResize">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
@@ -31,27 +33,25 @@
         <activity
             android:name=".UserRegistration"
             android:label="Registration"
-            android:screenOrientation="portrait"></activity>
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AdminPanel"
             android:label="Admin Panel"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".DisplayVisitorNames"
             android:label="All Visitors"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".DisplayVisitorDetails"
             android:label="Details"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".AddFranchisee"
             android:label="Add Franchisee"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".DisplayVisitorsAdmin"
-            android:label="All Visitors"
-            android:screenOrientation="landscape"></activity>
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

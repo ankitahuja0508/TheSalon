@@ -21,8 +21,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AddFranchisee extends ActionBarActivity implements OnClickListener {
-    Button btnAddFranchisee;
-    EditText edtID, edtPass, edtLocation;
+    Button add;
+    EditText franchaiseeId, edtPass, edtLocation;
     boolean franchiseeAdded = false;
     JSONObject jsonResponse;
 
@@ -32,34 +32,22 @@ public class AddFranchisee extends ActionBarActivity implements OnClickListener 
         setContentView(R.layout.add_franchisee);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        btnAddFranchisee = (Button) findViewById(R.id.btnAddFranchisee);
-        edtID = (EditText) findViewById(R.id.edtFranchiseeID);
+        add = (Button) findViewById(R.id.btnAddFranchisee);
+        franchaiseeId = (EditText) findViewById(R.id.edtFranchiseeID);
         edtPass = (EditText) findViewById(R.id.edtFranchiseePass);
         edtLocation = (EditText) findViewById(R.id.edtLocation);
 
-        edtID.setTextAppearance(this,
-                android.R.style.TextAppearance_DeviceDefault);
 
-        edtPass.setTextAppearance(this,
-                android.R.style.TextAppearance_DeviceDefault);
+        add.setOnClickListener(this);
 
-        edtLocation.setTextAppearance(this,
-                android.R.style.TextAppearance_DeviceDefault);
-
-        btnAddFranchisee.setTextAppearance(this,
-                android.R.style.TextAppearance_DeviceDefault);
-
-        btnAddFranchisee.setOnClickListener(this);
-
-        edtID.requestFocus();
-        Defs.cd = new ConnectionDetector(getApplicationContext());
+        franchaiseeId.requestFocus();
     }
 
     public void startAddingTask() {
-        if (!edtID.getText().toString().isEmpty()
+        if (!franchaiseeId.getText().toString().isEmpty()
                 && !edtPass.getText().toString().isEmpty()
                 && !edtLocation.getText().toString().isEmpty()) {
-            if (Defs.cd.isConnectingToInternet()) {
+            if (Network.isAvailable(getApplicationContext())) {
                 new AddFranchiseeTask().execute();
             } else {
                 Defs.showToast(getApplicationContext(),
@@ -74,7 +62,7 @@ public class AddFranchisee extends ActionBarActivity implements OnClickListener 
     @Override
     public void onClick(View v) {
         // TODO Auto-generated method stub
-        if (v == btnAddFranchisee) {
+        if (v == add) {
             startAddingTask();
         }
     }
@@ -93,7 +81,7 @@ public class AddFranchisee extends ActionBarActivity implements OnClickListener 
 
 
         protected String doInBackground(String... args) {
-            String id = edtID.getText().toString().toLowerCase();
+            String id = franchaiseeId.getText().toString().toLowerCase();
             String password = edtPass.getText().toString().toLowerCase();
             String location = edtLocation.getText().toString().toLowerCase();
 
@@ -131,7 +119,7 @@ public class AddFranchisee extends ActionBarActivity implements OnClickListener 
             Intent i;
             try {
             if (franchiseeAdded) {
-                edtID.setText("");
+                franchaiseeId.setText("");
                 edtPass.setText("");
                 edtLocation.setText("");
                 Defs.showToast(getApplicationContext(),
