@@ -102,7 +102,7 @@ public class DisplayVisitorNames extends AppCompatActivity {
 		protected void onPreExecute() {
 			super.onPreExecute();
 			Defs.pDialog = new ProgressDialog(DisplayVisitorNames.this);
-            Defs.pDialog.setMessage("Loading products. Please wait...");
+            Defs.pDialog.setMessage("Loading visitors... Please wait...");
             Defs.pDialog.setIndeterminate(false);
             Defs.pDialog.setCancelable(false);
             Defs.pDialog.show();
