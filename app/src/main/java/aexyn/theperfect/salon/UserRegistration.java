@@ -146,7 +146,7 @@ public class UserRegistration extends ActionBarActivity implements OnClickListen
       @Override public void onClick(View v) {
         oldPass = edtOld.getText().toString();
         newPass = edtNew.getText().toString();
-        if (oldPass == "" || newPass == "") {
+        if (oldPass.equals("") || newPass.equals("")) {
           Defs.showToast(getBaseContext(), "Missing Fields");
         } else {
           new ChangePassword().execute();
@@ -162,7 +162,7 @@ public class UserRegistration extends ActionBarActivity implements OnClickListen
     SharedPreferences        sp   = PreferenceManager.getDefaultSharedPreferences(this);
     SharedPreferences.Editor edit = sp.edit();
     edit.putInt(key, value);
-    edit.commit();
+    edit.apply();
   }
 
   private void savePreferences(String key, String value) {
@@ -170,7 +170,7 @@ public class UserRegistration extends ActionBarActivity implements OnClickListen
     SharedPreferences        sp   = PreferenceManager.getDefaultSharedPreferences(this);
     SharedPreferences.Editor edit = sp.edit();
     edit.putString(key, value);
-    edit.commit();
+    edit.apply();
   }
 
   class Register extends AsyncTask<String, String, String> {
@@ -181,7 +181,7 @@ public class UserRegistration extends ActionBarActivity implements OnClickListen
       location = Defs.LOCATION;
       amount = edtAmount.getText().toString();
       service = edtService.getText().toString();
-      List<NameValuePair> params = new ArrayList<NameValuePair>();
+      List<NameValuePair> params = new ArrayList<>();
       params.add(new BasicNameValuePair("name", name));
       params.add(new BasicNameValuePair("contact", contact));
       params.add(new BasicNameValuePair("location", location));

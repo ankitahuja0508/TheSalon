@@ -24,7 +24,7 @@ public class SplashScreen extends Activity {
 
           //Remove activity
           finish();
-        } catch (Exception e) {
+        } catch (Exception ignored) {
 
         }
       }

@@ -5,17 +5,14 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.util.List;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URLEncodedUtils;
-import org.apache.http.conn.ConnectTimeoutException;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
@@ -42,7 +39,7 @@ public class JSONParser {
     try {
 
       // check for request method
-      if (method == "POST") {
+      if (method.equals("POST")) {
         // request method is POST
         // defaultHttpClient
         DefaultHttpClient httpClient = new DefaultHttpClient();
@@ -52,7 +49,7 @@ public class JSONParser {
         HttpResponse httpResponse = httpClient.execute(httpPost);
         HttpEntity httpEntity = httpResponse.getEntity();
         is = httpEntity.getContent();
-      } else if (method == "GET") {
+      } else if (method.equals("GET")) {
         // request method is GET
         DefaultHttpClient httpClient = new DefaultHttpClient();
         String paramString = URLEncodedUtils.format(params, "utf-8");
@@ -67,14 +64,7 @@ public class JSONParser {
         HttpEntity httpEntity = httpResponse.getEntity();
         is = httpEntity.getContent();
       }
-    } catch (UnsupportedEncodingException e) {
-      e.printStackTrace();
-    } catch (ClientProtocolException e) {
-      e.printStackTrace();
-    } catch (ConnectTimeoutException e) {
-      e.printStackTrace();
     } catch (IOException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     }
 
@@ -83,7 +73,7 @@ public class JSONParser {
       StringBuilder sb = new StringBuilder();
       String line = null;
       while ((line = reader.readLine()) != null) {
-        sb.append(line + "\n");
+        sb.append(line).append("\n");
       }
       is.close();
       json = sb.toString();

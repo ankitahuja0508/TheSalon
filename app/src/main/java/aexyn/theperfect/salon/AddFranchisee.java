@@ -34,7 +34,7 @@ public class AddFranchisee extends ActionBarActivity implements OnClickListener 
     edtPass = (EditText) findViewById(R.id.edtFranchiseePass);
     edtLocation = (EditText) findViewById(R.id.edtLocation);
 
-    add.setOnClickListener(this);
+    add.sevtOnClickListener(this);
 
     franchiseeId.requestFocus();
   }
