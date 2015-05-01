@@ -16,10 +16,6 @@ public class Network {
     }
     //then Mobile Data
     network = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
-    if (network != null && network.isConnected()) {
-      return true;
-    }
-
-    return false;
+    return network != null && network.isConnected();
   }
 }

@@ -206,11 +206,7 @@ public class UserRegistration extends ActionBarActivity implements OnClickListen
       try {
         int success = jsonResponse.getInt(Defs.TAG_SUCCESS);
 
-        if (success == 1) {
-          registered = true;
-        } else {
-          registered = false;
-        }
+        registered = success == 1;
       } catch (JSONException e) {
         e.printStackTrace();
       }

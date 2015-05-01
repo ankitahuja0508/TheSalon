@@ -81,12 +81,8 @@ public class AddFranchisee extends ActionBarActivity implements OnClickListener 
       try {
         int success = jsonResponse.getInt(Defs.TAG_SUCCESS);
 
-        if (success == 1) {
-          franchiseeAdded = true;
-        } else {
-          // failed to login
-          franchiseeAdded = false;
-        }
+        // failed to login
+        franchiseeAdded = success == 1;
       } catch (JSONException e) {
         e.printStackTrace();
       }
