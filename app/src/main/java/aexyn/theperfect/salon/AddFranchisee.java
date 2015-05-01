@@ -51,7 +51,7 @@ public class AddFranchisee extends ActionBarActivity implements OnClickListener 
         !edtPass.getText().toString().isEmpty() &&
         !edtLocation.getText().toString().isEmpty()) {
       if (Network.isAvailable(getApplicationContext())) {
-        new AddFranchiseeTask().execute();
+        new AddFranchiseeTask().execute();//
       } else {
         Defs.showToast(getApplicationContext(), "You don't have internet connection.");
       }
