@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="bluee">#ff0095da</color>
-    <color name="blue">#00f</color>
-    <color name="red">#f00</color>
-    <color name="back">#F56954</color>
-    <color name="light">#ffbfcdc0</color>
-    <color name="transparent">#0fff</color>
+  <color name="bluee">#ff0095da</color>
+  <color name="blue">#00f</color>
+  <color name="red">#f00</color>
+  <color name="back">#F56954</color>
+  <color name="light">#ffbfcdc0</color>
+  <color name="transparent">#0fff</color>
 
 </resources>

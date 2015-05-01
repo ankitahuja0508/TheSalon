@@ -4,40 +4,40 @@
        xmlns:tools="http://schemas.android.com/tools"
        tools:showIn="@layout/activity_login">
 
-    <aexyn.theperfect.salon.EditAnimation
+  <aexyn.theperfect.salon.EditAnimation
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:floatLabelTextAppearance="@style/TextAppearance.editAnim"
+      app:floatLabelTrigger="text">
+
+    <EditText
+        android:id="@+id/user_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:floatLabelTextAppearance="@style/TextAppearance.editAnim"
-        app:floatLabelTrigger="text">
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/userIDHintText"
+        android:inputType="textAutoComplete"
+        android:maxLength="40"
+        android:singleLine="true" />
 
-        <EditText
-            android:id="@+id/user_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-light"
-            android:hint="@string/userIDHintText"
-            android:inputType="textAutoComplete"
-            android:maxLength="40"
-            android:singleLine="true"/>
+  </aexyn.theperfect.salon.EditAnimation>
 
-    </aexyn.theperfect.salon.EditAnimation>
+  <aexyn.theperfect.salon.EditAnimation
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:floatLabelTextAppearance="@style/TextAppearance.editAnim"
+      app:floatLabelTrigger="text">
 
-    <aexyn.theperfect.salon.EditAnimation
+    <EditText
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:floatLabelTextAppearance="@style/TextAppearance.editAnim"
-        app:floatLabelTrigger="text">
-
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/user_id"
-            android:fontFamily="sans-serif-light"
-            android:hint="@string/passwordHintText"
-            android:inputType="textPassword"
-            android:maxLength="24"
-            android:singleLine="true"
-            android:textIsSelectable="false"/>
-    </aexyn.theperfect.salon.EditAnimation>
+        android:layout_below="@+id/user_id"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/passwordHintText"
+        android:inputType="textPassword"
+        android:maxLength="24"
+        android:singleLine="true"
+        android:textIsSelectable="false" />
+  </aexyn.theperfect.salon.EditAnimation>
 </merge>
